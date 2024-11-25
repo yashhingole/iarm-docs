@@ -6,7 +6,7 @@ import { Config } from '@docusaurus/types';
 
 const config: Config = {
   title: 'iARM Docs',
-  tagline: 'Comprehensive documentation for all features',
+  tagline: 'Get Started With i-ARM Documentation',
   url: 'https://your-site.com', // Replace with your site's URL
   baseUrl: '/', // Use '/' for local or hosted root-level setups
   onBrokenLinks: 'throw',
@@ -29,7 +29,7 @@ const config: Config = {
           routeBasePath: '/docs', // Base path for docs
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/YourOrg/docusaurus-site/edit/main/', // Replace with your repo edit URL
+            'https://github.com/yashhingole/iarm-docs/edit/main/', // Replace with your repo edit URL
         },
         blog: false, // Disable the blog if not needed
         theme: {
@@ -40,16 +40,33 @@ const config: Config = {
   ],
 
   themeConfig: {
+    themes: ['@docusaurus/theme-mermaid'],
     navbar: {
       title: 'iARM Docs',
-    //   logo: {
-    //     alt: 'iARM Logo',
-    //     src: 'img/logo.svg', // Replace with your logo file
-    //   },
+      logo: {
+        alt: 'Site Logo',
+        src: 'img/logo-light.svg', 
+        srcDark: 'img/logo-dark.svg', 
+      },
       items: [
         { to: '/docs/overview', label: 'Overview', position: 'left' },
         { to: '/docs/data-explorer', label: 'Data Explorer', position: 'left' },
-        { to: '/docs/my-data', label: 'My Data', position: 'left' },
+
+        {
+          label: 'My Data',
+          position: 'left', 
+          to: '/docs/my-data', 
+          items: [
+
+            {
+              label: 'Data Ingestion', 
+              to: '/docs/my-data/data-ingestion',
+            },
+            
+          ],
+        },
+
+
         { to: '/docs/my-disposable-dashboard', label: 'My Disposable Dashboard', position: 'left' },
         { to: '/docs/workspace-gov', label: 'Workspace Gov', position: 'left' },
         { to: '/docs/prm', label: 'PRM', position: 'left' },
@@ -68,18 +85,41 @@ const config: Config = {
             { label: 'Overview', to: '/docs/overview' },
             { label: 'Data Explorer', to: '/docs/data-explorer' },
             { label: 'My Data', to: '/docs/my-data' },
-            // { label: 'My Data', to: '/docs/my-data' },
-            
+            { label: 'My Disposable Dashboard', to: '/docs/my-disposable-dashboard' },
+            { label: 'Workspace Gov', to: '/docs/workspace-gov' },
+            { label: 'PRM', to: '/docs/prm' },
+            { label: 'Audit Log Sync', to: '/docs/audit-log-sync' },
+            { label: 'Universal Retention Connector', to: '/uniretentionconn' },
+            { label: 'Reports', to: '/reports' },
+            { label: 'Administration', to: '/administration' },
           ],
         },
         {
-          title: 'Community',
+          title: 'Sitemap',
           items: [
-            { label: 'GitHub', href: 'https://github.com/YourOrg/docusaurus-site' },
-          ],
+            { label: 'Service', href: '#'},
+            { label: 'Solution', href: '#'},
+            { label: 'Success Stories', href: '#'}
+          ]
         },
+        {
+          title: 'Learn More',
+          items: [
+            { label: 'Insights', href: '#'},
+            { label: 'Partners', href: '#'},
+            { label: 'About Us', href: '#'}
+          ]
+        },
+        {
+          title: 'Contact',
+          items: [
+            { label: 'Contact Us', href: '#'},
+            { label: 'Privacy Policy', href: '#'},
+            { label: 'Copyright Statements', href: '#'}
+          ]
+        }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} YourOrg. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Infotechtion. Built with Docusaurus.`,
     },
   },
 };

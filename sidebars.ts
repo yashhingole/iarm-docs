@@ -46,11 +46,21 @@ const sidebars: SidebarsConfig = {
         id: 'my-data/index', // Default landing page for "My Data"
       },
       items: [
-        'my-data/overview'
+        'my-data/overview',
         // 'my-data/detailed-intro',
         // 'my-data/glossary-taxonomy',
         // 'my-data/deployment-requirements',
         // 'my-data/troubleshooting-faq',
+      ],
+    },
+  ],
+  dataIngestionSidebar: [
+    {
+      type: 'category',
+      label: 'Data Ingestion',
+      items: [
+        'my-data/data-ingestion',
+        'my-data/sharepoint',
       ],
     },
   ],
@@ -128,10 +138,10 @@ const sidebars: SidebarsConfig = {
       label: 'Universal Retention Connector',
       link: {
         type: 'doc',
-        id: 'uniRetentionConn/index',
+        id: 'uniretentionconn/index',
       },
       items: [
-        'uniRetentionConn/overview'
+        'uniretentionconn/overview'
         // 'uniRetentionConn/detailed-intro',
         // 'uniRetentionConn/glossary-taxonomy',
         // 'uniRetentionConn/deployment-requirements',
@@ -162,7 +172,7 @@ const sidebars: SidebarsConfig = {
       label: 'Administration',
       link: {
         type: 'doc',
-        id: 'administration/overview',
+        id: 'administration/index',
       },
       items: [
         // 'administration/detailed-intro',

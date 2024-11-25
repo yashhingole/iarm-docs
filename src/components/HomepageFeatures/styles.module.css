@@ -1,6 +1,8 @@
 .features {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping to new rows */
+  gap: 20px; /* Adds space between both rows and columns */
+  justify-content: center; /* Centers cards within the container */
   padding: 2rem 0;
   width: 100%;
 }
@@ -8,4 +10,88 @@
 .featureSvg {
   height: 200px;
   width: 200px;
+}
+
+.featureContainer {
+  border-radius: 10px;
+  text-align: center;
+  margin-block: 10px;
+  width: 300px;
+}
+
+.cardStyle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px; 
+  width: 100%; 
+  max-width: 1300px; 
+  margin: auto auto; 
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+@media (max-width: 1200px) {
+  .cardStyle {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 15px; /* Slightly increase gap */
+  }
+}
+
+@media (max-width: 768px) {
+  .cardStyle {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px; /* Add more space between items */
+  }
+}
+
+@media (max-width: 480px) {
+  .cardStyle {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 20px;
+  }
+}
+
+/* Background colors for each card */
+.featureContainer:nth-child(1) {
+  background-color: #5A5A5A;
+  color: white;
+}
+
+.featureContainer:nth-child(2) {
+  background-color: #99D6E9;
+  color: #253F89;
+}
+
+.featureContainer:nth-child(3) {
+  background-color: #CFFB8F;
+  color: #253F89;
+}
+
+.featureContainer:nth-child(4) {
+  background-color: #253F89;
+  color: white;
+}
+
+.featureContainer:nth-child(5) {
+  background-color: #5A5A5A; 
+  color: white;
+}
+
+.featureContainer:nth-child(6) {
+  background-color: #99D6E9; 
+  color: #253F89;
+}
+
+.featureContainer:nth-child(7) {
+    background-color: #CFFB8F; 
+    color: #253F89;
+}
+
+.featureContainer:nth-child(8) {
+  background-color: #253F89;
+  color: white;
 }
